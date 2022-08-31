@@ -63,7 +63,7 @@ app.delete('/data/:id', (req, res) => {
 // setting the function to handle errors dynamically
 function validateData(data) {
     const schema = {
-        status: Joi.string().required()
+        status: Joi.string().required() //referring to status here because it is easy to see from the object
     };
     return Joi.validate(data, schema);
 };
